@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> first page </title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <div id="all">
+  <div id="st">
+    <button onclick="customizeGame()" id="kp"> play</button>
+</div>
+<div id="sty">
+
+  <button onclick="playGame()">customize your game</button>
+</div>
+</div>
+<script>
+        function playGame() {
+          window.location.href = 'coustmize.html';
+        }
+</script>
+
+<script>
+  function customizeGame() {
+    window.location.href = 'play.html';
+  }
+</script>
+<button onclick="gotorulepage()">game rules</button>
+    
+<script>
+          function gotorulepage() {
+            window.location.href = 'rule.html';
+          }
+</script>
+  
+</body>
+</html>

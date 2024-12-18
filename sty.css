@@ -1,0 +1,18 @@
+
+/* for coustmize game page */
+
+body{
+    background-color: darksalmon;
+}
+#saveSettings{
+ background-color: cadetblue; 
+ margin-top: 50px;  
+ height: 40px;
+ width: 100px;
+}
+#ka{
+    background-color: darkseagreen;
+    margin-top: 25px;
+    height: 35px;
+    width:100px;
+}

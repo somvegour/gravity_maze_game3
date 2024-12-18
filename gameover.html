@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+<body>
+    <h1>Game Over</h1>
+    <p>Your Score: <span id="finalScore"></span></p>
+    <button onclick="restartGame()">Restart</button>
+
+    <script>
+        document.getElementById('finalScore').textContent = localStorage.getItem('finalScore') || 0;
+
+        function restartGame() {
+            window.location.href = 'play.html'; // Redirect to game
+        }
+    </script>
+    <button onclick="backtohomepage()">Go to home page</button>
+
+    <script>
+        function backtohomepage() {
+          window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

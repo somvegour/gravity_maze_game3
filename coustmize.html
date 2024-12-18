@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Settings</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <div id="settings-container">
+        <h1>Game Settings</h1>
+
+        <!-- Speed Adjustment -->
+        <div id="speedControl">
+            <label for="speedRange">Ball Speed:</label>
+            <input type="range" id="speedRange" min="1" max="10" value="2">
+            <span id="speedValue">2</span>
+        </div>
+
+        <!-- Border Touch Enable/Disable -->
+        <div id="borderToggle">
+            <label for="borderSwitch">Border Touch Game Over:</label>
+            <input type="checkbox" id="borderSwitch" checked>
+        </div>
+
+        <!-- Save Button -->
+        <button id="saveSettings">Save Settings</button>
+    </div>
+
+    <script>
+        const speedRange = document.getElementById('speedRange');
+        const speedValue = document.getElementById('speedValue');
+        const borderSwitch = document.getElementById('borderSwitch');
+        const saveSettings = document.getElementById('saveSettings');
+
+        // Load previously saved settings
+        const savedSpeed = localStorage.getItem('ballSpeed');
+        const savedBorderSetting = localStorage.getItem('borderGameOver');
+
+        if (savedSpeed !== null) {
+            speedRange.value = savedSpeed;
+            speedValue.textContent = savedSpeed;
+        }
+
+        if (savedBorderSetting !== null) {
+            borderSwitch.checked = savedBorderSetting === 'true';
+        }
+
+        // Update speed value display when slider changes
+        speedRange.addEventListener('input', () => {
+            speedValue.textContent = speedRange.value;
+        });
+
+        // Save settings to localStorage and redirect to game
+        saveSettings.addEventListener('click', () => {
+            localStorage.setItem('ballSpeed', speedRange.value);
+            localStorage.setItem('borderGameOver', borderSwitch.checked);
+            window.location.href = 'index.html'; // Redirect to the main game page
+        });
+    </script>
+</body>
+</html>

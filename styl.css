@@ -1,0 +1,35 @@
+body{
+    background-color:rgba(255, 192, 203, 0.404);}
+
+
+    #st{
+ 
+      justify-content: center;
+      align-items: center;
+ padding-left: 45%;
+ padding-top: 25%;
+
+      width: 10px;  
+    }
+    #sty{       
+padding-left: 42.5%;
+padding-top: 0.7%;
+    }
+    button{
+
+        border: 1px solid black;
+        background-color:thistle;
+        justify-content: center;
+        height: 40px;
+        font-size: 16px;
+        font-style: inherit;
+        width: 170px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+       
+    
+        
+    }
+    #kp{
+        width: 100px;
+    }

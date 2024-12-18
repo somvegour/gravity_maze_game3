@@ -1,0 +1,83 @@
+/* for play game page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 10;
+    padding: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0a5737da;
+}
+
+#container {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    background-color: #eb7c21d0;
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#ball, #star {
+    position: absolute;
+    border-radius: 50%;
+}
+
+#ball {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+#star {
+    width: 20px;
+    height: 20px;
+    background-color: gold;
+}
+
+#scoreboard {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#horizontalButtons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.control-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin: 5px;
+}
+
+.control-button:hover {
+    background-color: #0056b3;
+}
+
+#leftButton{
+    margin-right: 98px;
+}
